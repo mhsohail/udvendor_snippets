@@ -13,4 +13,11 @@ foreach($vendors as $vendor) {
 	//restaurant_merchant
 }
 echo "</pre>";
+
+// get vendors data from session
+$vendor = Mage::getSingleton('udropship/session');
+$data = $vendor->getVendor()->getData();
+echo "<pre>";
+print_r($data);
+echo "</pre>";
 ?>
