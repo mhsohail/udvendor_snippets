@@ -15,9 +15,9 @@ foreach($vendors as $vendor) {
 echo "</pre>";
 
 // get vendors data from session
-$vendor = Mage::getSingleton('udropship/session');
-$data = $vendor->getVendor()->getData();
+$session = Mage::getSingleton('udropship/session');
+$data = $session->getVendor()->getData();
 echo "<pre>";
-print_r($data);
+echo $data['vendor_type'];
 echo "</pre>";
 ?>
